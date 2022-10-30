@@ -16,7 +16,7 @@ import javax.validation.constraints.Min;
 public class HelloWorldEndpoint {
 
     @GetMapping("/hello")
-    public ResponseEntity getMessage(@RequestParam("name") @Length(max = 30) String name, @RequestParam("age") @Max(200) @Min(0) int age) {
+    public ResponseEntity<String> getMessage(@RequestParam("name") @Length(max = 30) String name, @RequestParam("age") @Max(200) @Min(0) int age) {
         return ResponseEntity.ok("Hello " + name + " "+age);
     }
 }
