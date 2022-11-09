@@ -16,3 +16,13 @@ docker container ls
 ### execute bash inside the container
 docker exec -it CONTAINER_NAME bash
 
+### run locally 
+./gradlew bootRun
+
+### send a get request
+curl -G http://localhost:8080/api/hello -d name=ramzi -d age=30
+
+### view the api documentation, after running the application
+http://localhost:8080/api/swagger-ui/index.html
+
+
